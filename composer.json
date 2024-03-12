@@ -18,6 +18,7 @@
             "email": "info@3x1.io"
         }
     ],
+    "license": "MIT",
     "extra": {
         "laravel": {
             "providers": [],
