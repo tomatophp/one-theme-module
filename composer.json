@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/onetheme",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\OneTheme\\": "",
+            "Modules\\OneTheme\\App\\": "app/",
+            "Modules\\OneTheme\\Database\\Factories\\": "database/factories/",
+            "Modules\\OneTheme\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\OneTheme\\Tests\\": "tests/"
+        }
+    }
+}
