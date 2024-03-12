@@ -1,10 +1,14 @@
-# OneTheme
+![Screenshot](https://github.com/tomatophp/one-theme-module/blob/master/art/screenshot.png)
+
+# One Theme
 
 Ecommerce, Blog, CMS Theme For TomatoPHP Modules System
 
 ## Installation
 
-download repo as zip and upload it to your tomato project
+```bash
+composer require tomatophp/one-theme-module
+```
 
 ## Support
 
