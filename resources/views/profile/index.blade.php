@@ -19,7 +19,8 @@
             </div>
         </div>
 
-        <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4 my-8 w-full px-8">
+        @if(\Module::find('TomatoEcommerce')->isEnabled())
+            <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4 my-8 w-full px-8">
             <!-- Card -->
             <div class="flex items-center p-4 bg-white border rounded-lg shadow-xs dark:bg-gray-800">
                 <div class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500">
@@ -78,5 +79,6 @@
                 </div>
             </div>
         </div>
+        @endif
     </div>
 @endsection

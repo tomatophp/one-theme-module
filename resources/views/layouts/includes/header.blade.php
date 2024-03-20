@@ -63,6 +63,7 @@
                             </button>
                         </x-splade-form>
 
+                        @if(\Module::find('TomatoEcommerce')->isEnabled())
                         <x-splade-link
                             modal
                             :href="route('cart.cart')"
@@ -81,9 +82,10 @@
                                 <i class="bx bxs-cart text-lg"></i>
                             </div>
                         </x-splade-link>
-
+                        @endif
 
                         @if(auth('accounts')->user())
+                            @if(\Module::find('TomatoEcommerce')->isEnabled())
                             <x-splade-link
                                 modal
                                 :href="route('profile.wishlist.index')"
@@ -102,7 +104,9 @@
                                     <i class="bx bxs-heart text-md"></i>
                                 </div>
                             </x-splade-link>
+                            @endif
 
+                                @if(\Module::find('TomatoNotifications')->isEnabled())
                             <x-splade-link
                                 modal
                                 :href="route('profile.notifications.index')"
@@ -121,6 +125,7 @@
                                     <i class="bx bxs-bell text-md"></i>
                                 </div>
                             </x-splade-link>
+                                    @endif
                         @endif
                     </div>
 
@@ -152,8 +157,10 @@
                             </x-slot:button>
 
                             <x-tomato-admin-dropdown-item icon="bx bxs-user" type="link" label="{{__('Profile')}}" :href="route('profile.index')" />
+                            @if(\Module::find('TomatoEcommerce')->isEnabled())
                             <x-tomato-admin-dropdown-item warning icon="bx bxs-map" type="link" label="{{__('Address')}}" :href="route('profile.address.index')" />
                             <x-tomato-admin-dropdown-item warning icon="bx bxs-rocket" type="link" label="{{__('Orders')}}" :href="route('profile.orders.index')" />
+                            @endif
                             <x-tomato-admin-dropdown-item success icon="bx bxs-wallet" type="link" label="{{__('Wallet')}}" :href="route('profile.wallet.index')" />
                             <x-tomato-admin-dropdown-item icon="bx bxs-cog" type="link" label="{{__('Settings')}}" :href="route('profile.edit')" />
                             <x-tomato-admin-dropdown-item danger icon="bx bxs-user" type="link" label="{{__('Logout')}}" :href="route('profile.logout')" />
